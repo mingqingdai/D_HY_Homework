@@ -1,0 +1,24 @@
+build
+mx.scratch
+!.settings
+
+# 本机编译产物 / 编辑器 / 备份目录，不进仓库
+*.o
+*.d
+*.elf
+*.bin
+*.hex
+*.map
+*.su
+*.lst
+.vscode/
+原文件备份/
+
+# CMSIS 中与本 F103 工程无关的大体积组件（本地保留，不进仓库）
+Drivers/CMSIS/Core_A/
+Drivers/CMSIS/DSP/
+Drivers/CMSIS/Lib/
+Drivers/CMSIS/NN/
+Drivers/CMSIS/RTOS/
+Drivers/CMSIS/RTOS2/
+Drivers/CMSIS/docs/
