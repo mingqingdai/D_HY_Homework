@@ -1,90 +1,15 @@
-# ===== 本地 STM32 工程规则 =====
-build
-mx.scratch
-!.settings
+﻿# 仓库根级忽略规则（子文件夹 5-1_homework/ 内有更详细的针对性规则）
 
-# 本机编译产物 / 编辑器 / 备份目录，不进仓库
-*.o
-*.d
-*.elf
-*.bin
-*.hex
-*.map
-*.su
-*.lst
+# 本机编译产物
+build/
+build-*/
+Build/
+
+# 编辑器本机配置
 .vscode/
+
+# 改动前的本地备份
 原文件备份/
 
-# CMSIS 中与本 F103 工程无关的大体积组件（本地保留，不进仓库）
-Drivers/CMSIS/Core_A/
-Drivers/CMSIS/DSP/
-Drivers/CMSIS/Lib/
-Drivers/CMSIS/NN/
-Drivers/CMSIS/RTOS/
-Drivers/CMSIS/RTOS2/
-Drivers/CMSIS/docs/
-
-# ===== 远程仓库原有规则 =====
-# Compiled Object files
-*.slo
-*.lo
-*.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Linker files
-*.ilk
-
-# Debugger Files
-*.pdb
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-*.so.*
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
-
-# Build directories
-Build/
-build-*/
-
-# CMake generated files
-CMakeFiles/
-CMakeCache.txt
-cmake_install.cmake
-Makefile
-install_manifest.txt
-compile_commands.json
-
-# Temporary files
-*.tmp
+# 日志
 *.log
-*.bak
-*.swp
-
-# vcpkg
-vcpkg_installed/
-
-# debug information files
-*.dwo
-
-# test output & cache
-Testing/
-.cache/
